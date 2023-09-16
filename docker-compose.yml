@@ -1,0 +1,23 @@
+# docker-compose.yml
+
+version: '3'
+services:
+  myapp:
+    container_name: myapp
+    restart: always
+    build: .
+    ports:
+      - '3001:3001'
+    links:
+      - redis
+      - mongo
+  mongo:
+    env_file: ./src/.env
+    container_name: mysql
+    image: 'mysql:latest'
+    environment:
+      "MYSQL_DATABASE": "notes"
+      "MYSQL_ROOT_PASSWORD": ""
+  redis:
+    container_name: myapp-redis
+    image: 'redis:4.0.11'
