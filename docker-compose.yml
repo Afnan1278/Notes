@@ -27,6 +27,9 @@ services:
       DB_HOSTNAME: mysqldb
     ports:
       - '3307:3306'
-  redis:
-    container_name: myapp-redis
-    image: 'redis:4.0.11'
+  redis: 
+    image: redis:latest
+    container_name: redis
+    restart: unless-stopped
+    expose:
+      - 6379
