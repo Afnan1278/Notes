@@ -3,21 +3,30 @@
 version: '3'
 services:
   myapp:
+    env_file: ./src/.env
     container_name: myapp
     restart: always
     build: .
     ports:
-      - '3001:3001'
+      - '3000:3000'
     links:
       - redis
-      - mongo
-  mongo:
+      - mysqldb
+  mysqldb:
     env_file: ./src/.env
-    container_name: mysql
-    image: 'mysql:latest'
+    container_name: mysqldb
+    image: 'mysql:8.0'
+    command: --init-file /data/application/init.sql
+    volumes:
+        - ./init.sql:/data/application/init.sql
     environment:
-      "MYSQL_DATABASE": "notes"
-      "MYSQL_ROOT_PASSWORD": ""
+      NODE_ENV: development
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+      DB_USERNAME: root
+      MYSQL_DATABASE: notes
+      DB_HOSTNAME: mysqldb
+    ports:
+      - '3307:3306'
   redis:
     container_name: myapp-redis
     image: 'redis:4.0.11'

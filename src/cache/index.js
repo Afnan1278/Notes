@@ -1,6 +1,7 @@
 const { reject } = require('async');
 const Redis = require('redis')
 const client = Redis.createClient({
+    url: 'redis://redis:6379',
   legacyMode: true
 });
 (async () => { await client.connect(); })();
