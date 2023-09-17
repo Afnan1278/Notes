@@ -15,7 +15,6 @@ This is a Node.js application that uses Docker Compose to orchestrate containers
    git clone https://github.com/Afnan1278/Notes.git
    cd Notes
 
-
 2. Build and start the application using Docker Compose:
    ```bash
    docker-compose up 
