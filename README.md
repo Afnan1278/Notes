@@ -14,42 +14,28 @@ This is a Node.js application that uses Docker Compose to orchestrate containers
    ```bash
    git clone https://github.com/Afnan1278/Notes.git
    cd Notes
-2. Create a .env file in the project root directory and set the environment variables for MySQL and Redis:
-    ```bash
-   WEBHOST=http://localhost:3301
-   SERVER_URL = http://localhost:3000
-   EXPRESS_PORT=3000
-   EXPRESS_PORT_HTTPS=443
-   EXPRESS_PARAM_LIMIT=10000
-   EXPRESS_FileSize_LIMIT=5mb
-   
-   NODE_ENV=dev
-   
-   JWT_SECRETE=dw9VO~<L^`f0VI8p_TF1*]};wBJYn2X=-_2g_ZNVA0QAd
 
-   # APP DB 
-   DB_HOST=mysqldb
-   DB_NAME=notes
-   DB_USER=root
-   DB_PORT=3306
-   
-   DB_LOGGING=false
 
-   # REDIS
-   REDIS_HOST = redis
-   REDIS_PORT = 6379
-
-3. Build and start the application using Docker Compose:
+2. Build and start the application using Docker Compose:
    ```bash
    docker-compose up 
-4. Access the application at http://localhost:3000.
+3. Access the application at http://localhost:3000.
 
 
 ## Testing
 - To run the tests, use the following command:
     ```bash
     docker-compose run app npm test
-    
+## Configuration
+### MySQL
+MySQL database configuration can be set in the .env file as mentioned in the "Getting Started" section. Adjust the DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_HOST, and DB_PORT environment variables to match your MySQL configuration.
+
+### Redis
+Redis configuration is also set in the .env file. Modify the REDIS_HOST and REDIS_PORT environment variables to match your Redis server's hostname and port.
+
+### JWT Secret
+The JWT_SECRET environment variable in the .env file is used to sign and verify JWT tokens for authentication. Ensure it is a strong, secret key.
+
 ## Design Patterns
   This project follows several design patterns:
 
