@@ -25,7 +25,7 @@ This is a Node.js application that uses Docker Compose to orchestrate containers
    
    NODE_ENV=dev
    
-   JWT_SECRETE=dw9VO~<L^`f0VI8pcHxsT_TF1*]};wBJYn2X=-_2g_TqSEPZNVA0QAd
+   JWT_SECRETE=dw9VO~<L^`f0VI8p_TF1*]};wBJYn2X=-_2g_ZNVA0QAd
 
    # APP DB 
    DB_HOST=mysqldb
