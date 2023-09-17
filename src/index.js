@@ -44,5 +44,8 @@ server.listen( process.env.EXPRESS_PORT , () => {
     logger.log(`Note app listening at http://localhost:${process.env.EXPRESS_PORT}`)
 });    
 
+module.exports = server
+
+
 
 

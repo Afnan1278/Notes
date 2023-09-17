@@ -58,12 +58,13 @@ const bindRoute = (routes)=>{
                     
                     
                 }catch(error){
+                    res.status(400);
                     res.send(payload('',false,error.toString()));      
                     _error = error;
                     logger.log(`error: ${_error}`)
                 }
                 finally{
-                    logger.log(`req path: ${route.p}`)
+                //    logger.log(`req path: ${route.p}`)
                 }
             })
         });    

@@ -46,12 +46,7 @@ module.exports = (sequelize,DataTypes) => {
       allowNull: false,
     },
   });
-  User.sync().then(()=>{
-    logger.log("User table created")
-
-  }).catch(err =>{
-    logger.log(" error")
-  })
+  
 
   return User;
 };
