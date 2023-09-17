@@ -2,9 +2,9 @@
 
 version: '3'
 services:
-  myapp:
+  app:
     env_file: ./src/.env
-    container_name: myapp
+    container_name: app
     restart: always
     build: .
     ports:

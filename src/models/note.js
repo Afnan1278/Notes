@@ -47,11 +47,6 @@ module.exports = (sequelize,DataTypes) => {
     },
 
   });
-  Note.sync().then(()=>{
-    logger.log("Note table created")
 
-  }).catch(err =>{
-    logger.log(" error")
-  })
   return Note;
 };
