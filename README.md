@@ -21,16 +21,16 @@ This is a Node.js application that uses Docker Compose to orchestrate containers
 3. Access the application at http://localhost:3000.
 
 
-## Testing
-- To run the tests, use the following command:
-    ```bash
-    docker-compose run app npm test
-
 ## API Documentation
 - For detailed API documentation and usage, refer to the swagger url given below.
    ```bash
    https://app.swaggerhub.com/apis-docs/AFNANANWER2_1/note-apis/1.0.0-oas3#/
 <img width="1490" alt="Screenshot 2023-09-18 at 12 04 37 AM" src="https://github.com/Afnan1278/Notes/assets/42905539/5ffced65-63d4-4485-aec9-b35b2a4dcb19">
+
+## Testing
+- To run the tests, use the following command:
+    ```bash
+    docker-compose run app npm test
 
 ## Configuration
 ### MySQL
